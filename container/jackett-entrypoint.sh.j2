@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+/usr/bin/mono --debug /usr/lib/jackett-{{ ansible_env.JACKETT_VERSION }}/JackettConsole.exe --DataFolder={{ ansible_env.JACKETT_CONFIG | default('/var/lib/' + (ansible_env.USER | default('docker')) + '/.config/jackett') }}
